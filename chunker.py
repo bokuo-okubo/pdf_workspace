@@ -4,8 +4,13 @@ from more_itertools import chunked
 import os
 import copy
 
-chunk_size = 4
-file_name = "omote_all_ura_all_zipped_splited"
+file_name = os.environ['TARGET_FILE']
+if not file_name:
+    exit('no file name')
+chunk_size = int(os.environ['CHUNK'])
+if not chunk_size:
+    exit('no chunk size')
+
 input_file = f'./input/{file_name}.pdf'
 output_dir = f"./output/{file_name}_chunked"
 

@@ -1,10 +1,14 @@
 import PyPDF2
 import copy
+import os
 
 # original: https://gammasoft.jp/blog/pdf-divide-by-python/
 
+file_name = os.environ['TARGET_FILE']
 
-file_name = "omote_all_ura_all_zipped"
+if not file_name:
+    exit('no file name')
+
 input_file = f'./input/{file_name}.pdf'  # 見開き原稿
 output_file = f"./output/{file_name}_splited.pdf"  # 分割したPDFの保存
 
