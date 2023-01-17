@@ -1,16 +1,18 @@
 [tool.poetry]
-name = "pdf-workspace"
+name = "pdf_workspace"
 version = "0.1.0"
 description = ""
 authors = ["Yohei Okubo <okubo.yohei@gmail.com>"]
 readme = "README.md"
-packages = [{include = "pdf_workspace"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 pypdf2 = "^2.12.1"
 more-itertools = "^9.0.0"
 
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.1"
 
 [build-system]
 requires = ["poetry-core"]
