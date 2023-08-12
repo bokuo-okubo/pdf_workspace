@@ -16,7 +16,7 @@ for filename in os.listdir(input_folder):
             # ページ数を取得
             num_pages = reader.getNumPages()
             # 各ドキュメントのページ数リスト
-            str_val = "3333"
+            str_val = "3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,11".split(',')
 
             # 例として、10ページ、15ページ、20ページのドキュメントとする
             page_counts = [int(x) for x in str_val]
